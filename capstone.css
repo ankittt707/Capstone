@@ -169,7 +169,7 @@ header div {
     text-decoration: underline;
 }
 
-/* Typing Animation */
+
 @keyframes typing {
     from {
         width: 0;
@@ -188,7 +188,7 @@ header div {
     }
 }
 
-/* Slide Up Animation */
+
 @keyframes slideUp {
     from {
         transform: translateY(100%);
@@ -200,7 +200,7 @@ header div {
     }
 }
 
-/* Slide Down Animation */
+
 @keyframes slideDown {
     from {
         transform: translateY(-100%);
@@ -210,7 +210,7 @@ header div {
     }
 }
 
-/* Media Queries */
+
 @media (max-width: 1200px) {
     header {
         margin: 24px 60px;
