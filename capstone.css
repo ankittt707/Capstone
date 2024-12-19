@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+img {
+    width: 100%;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 20px;
+}
+
+.about p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    background-color: #2419F30F;
+    margin: 24px 180px;
+    padding: 19px 32px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 24px 0px #00000029;
+    animation: slideDown 0.5s ease;
+}
+
+header nav {
+    display: flex;
+    gap: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+header nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+header nav a:hover::after {
+    transform: translateY(0);
+}
+
+header h1 {
+    text-align: center;
+    font-family: "DotGothic16";
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.capstone h2 {
+    font-family: "DotGothic16";
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin: 144px 0px 48px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid transparent;
+    animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+}
+
+.capstone img {
+    animation: slideUp 0.5s ease;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 400px;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.contact h2 {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact form {
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.contact form div{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.contact input[type="text"] {
+    height: 60px;
+    width: 56px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact input[type="text"]:focus {
+    border-color: #000;
+}
+
+.contact button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2419F3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #444;
+}
+
+.contact a {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    color: #2419F3;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: black;
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    header {
+        margin: 24px 60px;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    header div {
+        justify-content: center;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .capstone h2 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: 24px 20px;
+        padding: 16px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .capstone h2 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px;
+    }
+
+    .capstone h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .contact form {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+    }
+}
+
+.about{
+    padding: 96px 270px;
+}
+
+.about p{
+    font-family: "DotGothic16";
+font-size: 48px;
+font-weight: 400;
+line-height: 52px;
+letter-spacing: -0.01em;
+text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p{
+    font-family: "DotGothic16";
+font-size: 28px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: -0.01em;
+}
+
+footer button{
+    background: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 1px solid #000;
+}
